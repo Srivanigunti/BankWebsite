@@ -27,12 +27,6 @@ public class AccountResource {
 	@Autowired
 	private AccountsService service;
 	
-	/*
-	 * @PostMapping("/savings") public void createSavingsAccount(@RequestBody
-	 * SavingsAccount savingsAccount) {
-	 * service.createsavingsAccount(savingsAccount); }
-	 */
-
 	@GetMapping
 	public ResponseEntity<List<Accounts>> getAllAccounts(){
 		List<Accounts> accounts=service.getallAccounts();
@@ -45,13 +39,6 @@ public class AccountResource {
 		return new ResponseEntity<Accounts>(account, HttpStatus.OK);
 	}
 
-	/*
-	 * @PutMapping("/savings") public void updateSavingsAccount(@RequestBody
-	 * SavingsAccount accounts) { service.updateSavingsAccount(accounts); }
-	 * 
-	 * @PutMapping("/current") public void updateCurrentAccount(@RequestBody
-	 * CurrentAccount accounts) { service.updateCurrentAccount(accounts); }
-	 */
 	@GetMapping("/{accountNumber}/balance")
 	public ResponseEntity<Double> getCurrentBalance(@PathVariable int accountNumber){
 		Optional<Accounts> optional = service.getAccountById(accountNumber);
@@ -68,6 +55,7 @@ public class AccountResource {
 		if(accounts==null) {
 			return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
 		}
+		
 		accounts.setCurrentBalance(currentBalance);
 		service.updateBalance(accounts);
 		return new ResponseEntity<Accounts>(accounts, HttpStatus.OK);

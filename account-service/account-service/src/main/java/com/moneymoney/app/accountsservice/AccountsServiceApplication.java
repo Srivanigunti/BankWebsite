@@ -21,11 +21,11 @@ public class AccountsServiceApplication {
 	public CommandLineRunner populateData(AccountsRepository accountsRepository) {
 		return (arg) -> {
 			accountsRepository.save(new SavingsAccount(101,"Srivani",10_000.00,true));
-			accountsRepository.save(new SavingsAccount(102,"Kunni",35_000.00,true));
-			accountsRepository.save(new SavingsAccount(103,"Venkat",25_000.00,false));
-			accountsRepository.save(new CurrentAccount(104,"Aruna",1_00_000.00,5_000.00));
-			accountsRepository.save(new CurrentAccount(105,"VarunSai",1_00_000.00,5_000.00));
-			accountsRepository.save(new CurrentAccount(106,"Mani",1_00_000.00,5_000.00));
+			accountsRepository.save(new SavingsAccount(102,"Kunni",25_000.00,true));
+			accountsRepository.save(new SavingsAccount(103,"Venkat",35_000.00,false));
+			accountsRepository.save(new CurrentAccount(104,"Aruna",40_000.00,5_000.00));
+			accountsRepository.save(new CurrentAccount(105,"VarunSai",50_000.00,5_000.00));
+			accountsRepository.save(new CurrentAccount(106,"Mani",60_000.00,5_000.00));
 		};
 	}
 	

@@ -18,8 +18,4 @@ public interface AccountsService {
 	void updateCurrentAccount(CurrentAccount accounts);
 
 	void updateBalance(Accounts accounts);
-
-	/*
-	 * void createsavingsAccount(SavingsAccount savingsAccount);
-	 */
 }

@@ -110,4 +110,3 @@ public class Transaction {
 				+ ", transactionDetails=" + transactionDetails + ", currentBalance=" + currentBalance + "]";
 	}	
 }
-

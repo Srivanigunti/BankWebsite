@@ -17,4 +17,3 @@ public class WebsiteApplication {
 		return new RestTemplate();
 	}
 }
-

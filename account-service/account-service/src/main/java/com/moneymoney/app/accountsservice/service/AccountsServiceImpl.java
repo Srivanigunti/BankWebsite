@@ -45,11 +45,5 @@ public class AccountsServiceImpl implements AccountsService {
 	public void updateBalance(Accounts accounts) {
 		repository.save(accounts);
 	}
-	
-	/*
-	 * @Override public void createsavingsAccount(SavingsAccount savingsAccount) {
-	 * repository.save(savingsAccount); }
-	 */
-	
 
 }

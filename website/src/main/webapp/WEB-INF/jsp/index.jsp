@@ -7,10 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form >
-	<a href="deposits">Deposit</a><br>
-	<a href="withdrawal">Withdraw</a><br>
-	<a href="fundtransfers">FundTransfer</a><br>
-
+<a href="depositForm">Deposit</a><br><br>
+<a href="withdrawForm">Withdraw</a><br><br>
+<a href="fundTransferForm">Fund Transfer</a>
 </body>
 </html>
